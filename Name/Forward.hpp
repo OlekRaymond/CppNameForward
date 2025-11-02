@@ -15,7 +15,7 @@ namespace name_forward {
 #define Ray_Forward_const(name) \
     template<typename ...Args> \
     constexpr decltype(auto) name (Args... a) const { \
-        return static_cast<Derived*>(this)->ContainerToForwardTo(). \
+        return static_cast<const Derived*>(this)->ContainerToForwardTo(). \
          name (std::forward<Args>(a)...); \
     }
 

@@ -56,4 +56,6 @@ cmake --install dir
 
 Though this is a header only library so copying the required headers into an include directory is perfectly reasonable.
 
+For building tests, mutation tests, sanitizers please see [CONTRIBTING.md](CONTRIBUTING.md).
+
 

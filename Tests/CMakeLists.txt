@@ -1,13 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-# Download and configure GoogleTest
-include(FetchContent)
-FetchContent_Declare(
-    googletest
-    GIT_REPOSITORY https://github.com/google/googletest.git
-    GIT_TAG release-1.11.0
-)
-FetchContent_MakeAvailable(googletest)
+include(GetGtest.cmake)
 
 # Enable testing
 enable_testing()
@@ -22,8 +15,8 @@ add_executable(unit_tests
 # Link against gtest
 target_link_libraries(unit_tests
     PRIVATE
-    gtest
-    gtest_main
+    GTest::GTest
+    GTest::Main
 )
 
 # Add tests to CTest
