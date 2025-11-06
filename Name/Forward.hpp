@@ -134,7 +134,6 @@ struct Vector :
         ShrinkToFit<Derived>,
         Erase<Derived>,
         PushBack<Derived>,
-        Push<Derived>,
         Insert<Derived>,
         PopBack<Derived>
 {};
